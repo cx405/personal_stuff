@@ -1,4 +1,4 @@
-Since I haven't figured yet how to make github actually track the pages that I need, I am going to use this method: both as excercise and for practice. Its impossible to edit the gist so I am going to use this instead.
+Since I haven't figured yet how to make github actually track the pages that I need, I am going to use this method: both as exercise and for practical use. Its impossible to edit the gist so I am going to use this instead.
 
 # bugs/isses with nixos
 -- -- -- --
