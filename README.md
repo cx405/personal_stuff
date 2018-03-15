@@ -3,7 +3,7 @@ Since I haven't figured yet how to make github actually track the pages that I n
 # bugs/issues with nixos
 -- -- -- --
 Open: YES  
-Problem: nixos can't directly run some opengl applications, which results in black screen or weird resolution followed by black screen (at least on my machine). Freeorion works flawlessly though.  
+Problem: nixos can't directly run the opengl applications, which results in black screen or weird resolution followed by black screen (at least on my machine). Freeorion works flawlessly though.  
 Probable reason: gl library binding  
 Severity: HIGH  
 Link: https://github.com/NixOS/nixpkgs/issues/9415  
@@ -12,10 +12,10 @@ Notes: basically, a blocker to all opengl games.
 
 Open: YES (workaround exists)  
 Problem: KDE Phonon can't connect to phonon-gstreamer backend  
-Probable reason: Incorrect search paths in gstreamer-phonon package  
+Actual reason: Incorrect search paths in gstreamer-phonon package  
 Severity: HIGH  
 Link: https://github.com/NixOS/nixpkgs/issues/27050  
-Notes: I still have no idea how to fix this. This makes KDE desktop useless, for desktop user.  
+Notes: This happens because the phonon backends have hard-coded search paths, which fail on nixos. This makes KDE useless for desktop user. The problem is NOT solved in the proper way currently.  
 
 
 Open: YES  
