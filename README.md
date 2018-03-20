@@ -23,11 +23,20 @@ Problem: the standard tools on nixos very probably contain a bug, that can lead 
 Probable reason: bug in standard tools  
 Severity: MEDIUM/unknown  
 Link: https://github.com/NixOS/nixpkgs/issues/36989  
-Notes: standard nix toolchain has corrupted symlinks within "/nix/var/nix/profiles/per-user/<my_user_name_here>/" 
+Notes: standard nix toolchain has corrupted symlinks within "/nix/var/nix/profiles/per-user/<my_user_name_here>/"  
+
 
 Relevant: YES (18.04+)  
 Problem: kdenlive package does not detect frei0r plugins, even if properly installed.  
 Probable reason: unknown  
 Severity: MINOR  
 Link: https://github.com/NixOS/nixpkgs/issues/29614  
-Notes: - 
+Notes: minor severity, because package is already implemented. Kdenlive just refuses to see it.  
+
+
+Relevant: YES (18.04+)  
+Problem: there is currently no known way to list available video drivers in services.xserver.videoDrivers  
+Probable reason: tool or method doesn't exist  
+Severity: MEDIUM  
+Link: https://github.com/NixOS/nixpkgs/issues/24801  
+Notes: in some cases makes it hard to pick the correct video driver.  
