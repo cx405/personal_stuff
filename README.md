@@ -7,7 +7,7 @@ Problem: nixos can't directly run the opengl applications, which results in blac
 Probable reason: GL library binding  
 Severity: HIGH  
 Link: https://github.com/NixOS/nixpkgs/issues/9415  
-Link: https://github.com/NixOS/nixpkgs/issues/37673
+Link: https://github.com/NixOS/nixpkgs/issues/37673  
 Notes: basically, a blocker to all opengl games. Breaks nixos as desktop system.  
 
 
