@@ -7,13 +7,14 @@ Problem: nixos can't directly run the opengl applications, which results in blac
 Probable reason: GL library binding  
 Severity: HIGH  
 Link: https://github.com/NixOS/nixpkgs/issues/9415  
+Link: https://github.com/NixOS/nixpkgs/issues/37673
 Notes: basically, a blocker to all opengl games. Breaks nixos as desktop system.  
 
 
 Relevant: YES (17.09), NO (17.09 with workaround), NO (18.03+, no workaround needed)  
 Problem: KDE Phonon can't connect to phonon-gstreamer or phonon-vlc backends  
 Actual reason: Incorrect search paths in gstreamer-phonon package  
-Severity: HIGH(breaks multimedia subsystem of KDE desktop)  
+Severity: HIGH (breaks multimedia subsystem of KDE desktop)  
 Link: https://github.com/NixOS/nixpkgs/issues/27050  
 Notes: This happens because the phonon backends have hard-coded search paths, which fail on nixos. This makes KDE useless for desktop user. Currently the problem is NOT patched in 17.09.  
 
