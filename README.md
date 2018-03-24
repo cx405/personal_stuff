@@ -45,9 +45,9 @@ Notes: in some cases makes it hard to pick the correct video driver. In my case,
 Relevant: NO  
 Problem: nixos can't directly run the opengl applications, which results in black screen or weird resolution followed by black screen (at least on my machine). Freeorion works flawlessly though.  
 Reason: when using system with Radeon GPU, make sure that you have "ati" in the videoDrivers:  
-'''
-services.xserver.videoDrivers = [ "radeon" "ati" "vesa" ];
-'''
+'''  
+services.xserver.videoDrivers = [ "radeon" "ati" "vesa" ];  
+'''  
 Severity: HIGH (fixed)  
 Link: https://github.com/NixOS/nixpkgs/issues/9415  
 Link: https://github.com/NixOS/nixpkgs/issues/37673  
