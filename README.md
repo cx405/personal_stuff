@@ -2,15 +2,6 @@ Since I haven't figured yet how to make github actually track the pages that I n
 
 # bugs/issues with nixos
 -- -- -- --
-Relevant: YES  
-Problem: nixos can't directly run the opengl applications, which results in black screen or weird resolution followed by black screen (at least on my machine). Freeorion works flawlessly though.  
-Probable reason: GL library binding  
-Severity: HIGH  
-Link: https://github.com/NixOS/nixpkgs/issues/9415  
-Link: https://github.com/NixOS/nixpkgs/issues/37673  
-Notes: basically, a blocker to all opengl games. Breaks nixos as desktop system.  
-
-
 Relevant: YES (17.09), NO (17.09 with workaround), NO (18.03+, no workaround needed)  
 Problem: KDE Phonon can't connect to phonon-gstreamer or phonon-vlc backends  
 Actual reason: Incorrect search paths in gstreamer-phonon package  
@@ -48,4 +39,16 @@ Problem: there is currently no known way to list available video drivers in serv
 Probable reason: tool or method doesn't exist  
 Severity: MEDIUM  
 Link: https://github.com/NixOS/nixpkgs/issues/24801  
-Notes: in some cases makes it hard to pick the correct video driver.  
+Notes: in some cases makes it hard to pick the correct video driver. In my case, it lead to video problems.  
+
+
+Relevant: NO  
+Problem: nixos can't directly run the opengl applications, which results in black screen or weird resolution followed by black screen (at least on my machine). Freeorion works flawlessly though.  
+Reason: when using system with Radeon GPU, make sure that you have "ati" in the videoDrivers:  
+'''
+services.xserver.videoDrivers = [ "radeon" "ati" "vesa" ];
+'''
+Severity: HIGH (fixed)  
+Link: https://github.com/NixOS/nixpkgs/issues/9415  
+Link: https://github.com/NixOS/nixpkgs/issues/37673  
+Notes: only added "radeon" assuming its kernel driver. However one needs "ati" as it pulls "x86-video-ati", which is DDE driver for all AMD cards for Xorg.  
