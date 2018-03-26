@@ -52,3 +52,9 @@ Severity: HIGH (fixed)
 Link: https://github.com/NixOS/nixpkgs/issues/9415  
 Link: https://github.com/NixOS/nixpkgs/issues/37673  
 Notes: only added "radeon" assuming its kernel driver. However one needs "ati" as it pulls "x86-video-ati", which is DDE driver for all AMD cards for Xorg.  
+
+## features/improvements
+-- -- -- --  
+What: Make Nixos Wiki visible from Nixos official support page.  
+Why: Wikis solve all specific issues quickly, this is where Nixos is currently lacking (it has superb core documentation).  
+Link: https://github.com/NixOS/nixos-homepage/issues/196  
